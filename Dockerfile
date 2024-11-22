@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+# Install additional dependencies that might be missing
+RUN npm install @radix-ui/react-slot class-variance-authority clsx tailwind-merge
+
 # Build the application
 RUN npm run build
 
