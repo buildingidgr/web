@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install the application dependencies
 RUN npm install
 
+# Install additional dependencies that might be missing
+RUN npm install @radix-ui/react-slot class-variance-authority clsx tailwind-merge
+
 # Copy the rest of the application code to the working directory
 COPY . .
 
